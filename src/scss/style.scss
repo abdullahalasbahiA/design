@@ -1,5 +1,63 @@
-$body-color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
-body, h1{
-  color: $body-color;
+$green-var-color: rgb(54, 230, 83);
+$darker1-green-var-color: rgb(35, 175, 58);
+$darker2-green-var-color: rgb(26, 131, 43);
+$orange-var-color: rgb(250, 147, 51);
+$darker-orange-var-color: rgb(201, 105, 15);
+
+
+*{
+  margin:0;padding:0;box-sizing: border-box;font-family: "Open Sans";
 }
+
+header{
+  background: $green-var-color;
+  height: 80px;
+}
+
+.wrapper{
+  width: 1170px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  // background: red;
+  color: black;
+}
+
+.wrapper .logo h1{
+  display: inline-block;
+  text-transform: uppercase;
+  line-height: 80px;
+}
+
+.wrapper nav{
+  width: 70%;
+}
+
+.wrapper nav ul{
+  line-height: 80px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  // width: 70%;
+}
+
+.wrapper nav ul li{
+  display: inline-block;
+
+  a{
+    color:black;
+    text-decoration: none;
+    padding: 3px 15px;
+    border-radius: 5px;
+  }
+}
+
+.wrapper nav ul li a:hover{
+  background: $orange-var-color;
+  border-bottom: 4px solid $darker-orange-var-color;
+}
+
+
+

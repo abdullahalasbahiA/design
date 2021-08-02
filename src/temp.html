@@ -1,16 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="scss/fontawesome/css/all.min.css" />
+        <script defer src="/your-path-to-fontawesome/js/all.js"></script>
+        <title><%= htmlWebpackPlugin.options.title %></title>
+    </head>
+    <body>
 
-    <header>
+        <header>
+            <div class="wrapper">
+                <div class="logo">
+                    <h1>Modus</h1>Versus
+                </div>
+                <nav>
+                    <ul class="menu">
+                        <li>
+                            <a href="#" class="active">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Services
+                            </a>
+                        </li>
+                        <li class="dd-parent">
+                            <a id="portfolio" href="#">
+                                Porfolio
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Features
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Contacts
+                            </a>
+                        </li>
+                        <li><a href="#">search</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="menu-border">
+                    <ul class="dd-menu">
+                        <li><a href="#1"> > Portfolio column page</a></li>
+                        <li><a href="#2"> > Portfolio column page</a></li>
+                        <li><a href="#3"> > Portfolio column page</a></li>
+                    </ul>
+                </div>
 
-    </header>
-    
-</body>
+            </div>
+        </header>
+        
+        
+    </body>
 </html>

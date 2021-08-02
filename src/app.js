@@ -1,7 +1,15 @@
 import "./scss/style.scss";
-// import style from './css/style.css';
 import component from './component.js';
+// import style from './css/style.css';
 
-console.log("app.js File");
+const portfolio_link = document.getElementById("portfolio");
+const drop_down_menu = document.getElementById("dd-menu");
 
-document.body.append(component())
+// portfolio_link.onclick(()=>{
+
+// });
+
+
+
+// google icon
+// document.body.append(component())
