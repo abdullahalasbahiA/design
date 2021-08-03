@@ -1,73 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="scss/fontawesome/css/all.min.css" />
-        <script defer src="/your-path-to-fontawesome/js/all.js"></script>
-        <title><%= htmlWebpackPlugin.options.title %></title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
 
-        <header>
-            <div class="wrapper">
-                <div class="logo">
-                    <h1>Modus</h1>Versus
-                </div>
-                <nav>
-                    <ul class="menu">
-                        <li>
-                            <a href="#" class="active">
+
+        .swiper-container{
+            position: relative;
+            height: 500px;
+            overflow-y: visible;
+            overflow-x: visible;
+            background-color:rgb(245, 245, 245);
+        }
+        .swiper-container .swiper-slide{
+            background: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+        }
+
+        .swiper-button-prev{
+            background: rgb(252, 125, 22);
+            width: 70px;
+            height: 70px;
+            border-radius: 5px;
+            padding-left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px rgb(206, 103, 19);
+            left:-5px;
+            top:50%;
+            transform: translateY(-50%);
+        }
+        .swiper-button-prev::before,
+        .swiper-button-prev::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background-color: transparent;
+            border-color: #fff;
+            border-style: solid;
+            border-width: 2px 2px 0px 0px;
+
+            transform:rotate(-135deg) scale(1.9);
+        }
+
+        .swiper-button-prev::before{
+            transform: translateX(-1px) rotate(-135deg) scale(1.9);
+        }
+
+        /* NEXT */
+
+        .swiper-button-next{
+            background: rgb(252, 125, 22);
+            width: 70px;
+            height: 70px;
+            border-radius: 5px;
+            padding-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px rgb(206, 103, 19);
+            right:-5px;
+            top:50%;
+            transform: translateY(-50%);
+        }
+
+        .swiper-button-next::before,
+        .swiper-button-next::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background-color: transparent;
+            border-color: #fff;
+            border-style: solid;
+            border-width: 2px 2px 0px 0px;
+
+            transform:rotate(45deg) scale(1.9);
+        }
+
+        .swiper-button-next::before{
+            transform: translateX(0px) rotate(45deg) scale(1.9);
+        }
+
+
+        .swiper-pagination-bullet{
+            bottom:0;
+        }
+        .swiper-pagination-bullet,
+        .swiper-pagination-bullet-active{
+            height: 5px;
+            width: 50px;
+            border-radius: 0;
+            background: rgb(0, 0, 0);
+            color: red;
+        }.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+            bottom: -30px;
+        }
+        .swiper-pagination-bullet-active{
+            
+            background-color: rgb(206, 103, 19);
+        }
+
+    </style>
+    <script defer src="/your-path-to-fontawesome/js/all.js"></script>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <h1>Modus</h1>Versus
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <div><a href="#" class="active">
                                 Home
                             </a>
-                        </li>
-                        <li>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
                             <a href="#">
                                 About
                             </a>
-                        </li>
-                        <li>
-                            <a href="#">
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#">
                                 Services
                             </a>
-                        </li>
-                        <li class="dd-parent">
-                            <a id="portfolio" href="#">
+                        </div>
+                    </li>
+                    <li class="dd-parent">
+                        <div class="relative-to">
+                            <a href="#">
                                 Porfolio
                             </a>
-                        </li>
-                        
-                        <li>
+                            <div class="menu-border">
+                                <ul class="dd-menu">
+                                    <li>
+                                        <a href="#1">> portfolio column 2 page</a>
+                                    </li>
+                                    <li>
+                                        <a href="#2">> portfolio column 2 page</a>
+                                    </li>
+                                    <li>
+                                        <a href="#3">> portfolio column 2 page</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div>
                             <a href="#">
                                 Blog
                             </a>
-                        </li>
-                        <li>
-                            <a href="#">
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#">
                                 Features
                             </a>
-                        </li>
-                        <li>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
                             <a href="#">
                                 Contacts
                             </a>
-                        </li>
-                        <li><a href="#">search</a></li>
-                    </ul>
-                </nav>
-                
-                <div class="menu-border">
-                    <ul class="dd-menu">
-                        <li><a href="#1"> > Portfolio column page</a></li>
-                        <li><a href="#2"> > Portfolio column page</a></li>
-                        <li><a href="#3"> > Portfolio column page</a></li>
-                    </ul>
-                </div>
+                        </div>
+                    </li>
+                    <li><a href="#">search</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
 
-            </div>
-        </header>
+    <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    
         
-        
-    </body>
+    </div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    loop: true,
+    
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+    });
+</script>
+
+
+</body>
 </html>
