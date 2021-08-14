@@ -40,20 +40,33 @@ module.exports = {
             // babel for Javascript ES6 > ES5
             { test: /\.js$/,
               exclude: /node_modules/,
-              use: {
+              use: 
+              {
                   loader: 'babel-loader',
                   options: {
                       presets: ['@babel/preset-env']
                   }
-              }
+            }
             },
             
         ]
     },
     // plugins
-    plugins: [new HtmlWebpackPlugin({
-        title: 'Just a Demo',
-        filename: 'index.html',
-        template: path.resolve(__dirname, 'src/temp.html')
-    })],
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Just a Demo',
+            filename: 'index.html',
+            template: path.resolve(__dirname, 'src/temp.html')
+        }),
+        new HtmlWebpackPlugin({
+            title: 'About page',
+            filename: 'about.html',
+            template: path.resolve(__dirname, 'src/about.html')
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Blog page',
+            filename: 'blog.html',
+            template: path.resolve(__dirname, 'src/blog.html')
+        })
+    ],
 }

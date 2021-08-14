@@ -1,0 +1,342 @@
+@import "variables";
+
+body.blog{
+
+.blog-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 92%;
+    margin: auto;
+
+    .posts-side{
+        width: 75%;
+        padding-right: 50px;
+    }
+
+    .side-content{
+        width: 25%;
+    }
+}
+
+.posts-side{
+    .single-post{
+        display: flex;
+        justify-content: space-between;
+        min-width: 400px;
+    
+
+        .left-side-post{
+            .post-date{
+                background:#f8f8f8;
+                padding: 5px 12px;
+                font-size: 22px;
+                text-align: center;
+                color: #808b8d;
+                margin: 10px;
+                margin-top: 0;
+                border-radius: 5px;
+                box-shadow: 0 3px 0 #e6e6e6;
+                span:nth-child(1){
+                    display: block;
+                }
+                span:nth-child(2){
+                    // display: block;
+                    font-size:32px;
+                    font-weight: bold;
+                }
+            }
+
+            .post-icon{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #808b8d;
+                height: 80px;
+                width: 80px;
+                margin: 10px;
+                margin-top: 20px;
+                border-radius: 5px;
+                font-size: 2rem;
+                color: white;
+            }
+        }
+
+
+        .post{
+            // width: 100%;
+
+            .post-above{
+                // width: 100%;
+                margin-bottom: 35px;
+                // border: 1px solid #000;
+                overflow: hidden;
+                .post-image{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #f8f8f8;
+                    height: 45vh;
+                    border-radius: 5px;
+                    font-size: 7rem;
+                    color: #ececec;
+                }
+
+                
+                .swiper-container .swiper-slide{
+                    width: 100% !important;
+                    background: #808b8d;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 60px;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+
+
+                .swiper-button-prev,
+                .swiper-button-next{
+                    background: $red;
+                    box-shadow: 0px 4px $darker-red;
+                }
+                
+            }
+
+            .post-info {
+                margin-bottom: 1.8rem;
+                *{
+                    display: inline-block;
+                }
+
+                .post-author:not(.author-name),
+                .post-category >span{
+                    color:#808b8d;
+                }
+                
+                .post-tag .svg-inline--fa,
+                .post-number-of-comments .svg-inline--fa{
+                    color: #76c7c1;
+                }
+
+                .author-name, .post-category span:nth-child(2),
+                .post-tag span a,
+                .post-number-of-comments span{
+                    color: #e9645b;
+                }
+
+                .post-category,
+                .post-tag{
+                    margin-right: 15px;
+                }
+
+                .post-tag span a{
+                    text-decoration: none;
+                }
+
+                .post-title{
+                    color: #76c7c1;
+                    font-weight: 600;
+                    // margin-top: 35px;
+                }
+            }
+
+            p.post-article{
+                color: #808b8d;
+            }
+
+
+            .continue{
+                display: inline-block;
+                margin: 15px 0 35px 0;
+            }
+
+            span .svg-inline--fa,
+            span a
+            {
+                color: $red;
+            }
+
+           
+
+        }
+        
+    }
+
+    hr{
+        border: none;
+        height: 2px;
+        background: $gray;
+        margin-bottom: 35px;
+    }
+}
+
+.postes-pages{
+
+    ul{
+        display: flex;
+        margin-bottom: 60px;
+        li{
+            display: flex;
+            height:2rem;
+            width: 2rem;
+            justify-content: center;
+            align-items: center;
+            border-radius: .2rem;
+            font-weight: 600;
+            
+            list-style: none;
+            margin-right: 10px;
+            background: $gray;
+            
+            
+            
+            a{
+                color: white;
+                text-decoration: none;
+            }
+        }
+        li.active{
+            background: $dark-green;
+        }
+        li:hover{
+            background-color: $red;
+        }
+        
+    }
+
+}
+
+
+
+.side-content{
+    width: 100%;
+    min-width: 200px;
+
+    .categories{
+        margin-bottom: 40px;
+        h3{
+            color: #808b8d;
+            margin-bottom: 15px;
+        }
+
+        ul{
+            margin-left: 20px;
+            li{
+              list-style: none;
+                a{
+                    color: $red;
+                    text-decoration: none;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+
+                    .svg-inline--fa{
+                        color: #76c7c1;
+                        font-size: .8rem;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .recent-posts{
+        h3{
+            color: $gray;
+            margin-bottom: 15px;
+        }
+        ul{
+            li{
+                display: flex;
+                justify-content: flex-start;
+                border-bottom: 1px solid #acacac;
+                list-style: none;
+                margin-bottom: 10px;
+                margin-right: 10px;
+                padding-bottom: 10px;
+                
+                .svg-inline--fa{
+                    color: black;
+                    font-size: 0.8rem;
+                    color: $blue;
+                    margin-right: 10px;
+                    margin-top: 7px;
+                }
+
+                .recent-post-title{
+                    display: inline;
+                    color: $red;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                }
+                .recent-post-date{
+                    display: block;
+                    font-size: 0.8rem;
+                    color: $gray;
+                }
+            }
+        }
+    }
+
+    .tags{
+        margin-top: 30px;
+        width: 300px;
+        margin-bottom: 30px;
+        
+        h3{
+            color: $gray;
+            margin-bottom: 20px;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            
+            li{
+                list-style: none;
+                background: $gray;
+                color: white;
+                padding: 5px 8px;
+                margin-right: 5px;
+                margin-bottom: 5px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            li:hover{
+                background: $red;
+            }
+
+        }
+
+    }
+
+    .archive{
+        h3{
+            color: $gray;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        ul{
+            li{
+                list-style: none;
+                padding-left: 20px;
+                margin-bottom: 10px;
+                font-size: 0.8rem;
+                .svg-inline--fa{
+                    color: $gray;
+                    margin-right: 10px;
+                }
+                .archive-date{
+                    color: $red;
+                }
+            }
+        }
+    }
+}
+
+
+}
+// This should be the end of the file 
+//no styling below it
