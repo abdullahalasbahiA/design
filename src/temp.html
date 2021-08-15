@@ -1,73 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="scss/fontawesome/css/all.min.css" />
-        <script defer src="/your-path-to-fontawesome/js/all.js"></script>
-        <title><%= htmlWebpackPlugin.options.title %></title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="scss/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
 
-        <header>
-            <div class="wrapper">
-                <div class="logo">
-                    <h1>Modus</h1>Versus
-                </div>
-                <nav>
-                    <ul class="menu">
-                        <li>
-                            <a href="#" class="active">
+
+        .swiper-container{
+            position: relative;
+            height: 500px;
+            overflow-y: visible;
+            overflow-x: visible;
+            background-color:rgb(245, 245, 245);
+        }
+        .swiper-container .swiper-slide{
+            background: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+        }
+
+        .swiper-button-prev{
+            background: rgb(252, 125, 22);
+            width: 70px;
+            height: 70px;
+            border-radius: 5px;
+            padding-left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px rgb(206, 103, 19);
+            left:-5px;
+            top:50%;
+            transform: translateY(-50%);
+        }
+        .swiper-button-prev::before,
+        .swiper-button-prev::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background-color: transparent;
+            border-color: #fff;
+            border-style: solid;
+            border-width: 2px 2px 0px 0px;
+
+            transform:rotate(-135deg) scale(1.9);
+        }
+
+        .swiper-button-prev::before{
+            transform: translateX(-1px) rotate(-135deg) scale(1.9);
+        }
+
+        /* NEXT */
+
+        .swiper-button-next{
+            background: rgb(252, 125, 22);
+            width: 70px;
+            height: 70px;
+            border-radius: 5px;
+            padding-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px rgb(206, 103, 19);
+            right:-5px;
+            top:50%;
+            transform: translateY(-50%);
+        }
+
+        .swiper-button-next::before,
+        .swiper-button-next::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background-color: transparent;
+            border-color: #fff;
+            border-style: solid;
+            border-width: 2px 2px 0px 0px;
+
+            transform:rotate(45deg) scale(1.9);
+        }
+
+        .swiper-button-next::before{
+            transform: translateX(0px) rotate(45deg) scale(1.9);
+        }
+
+
+        .swiper-pagination-bullet{
+            bottom:0;
+        }
+        .swiper-pagination-bullet,
+        .swiper-pagination-bullet-active{
+            height: 5px;
+            width: 50px;
+            border-radius: 0;
+            background: rgb(0, 0, 0);
+            color: red;
+        }.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+            bottom: -30px;
+        }
+        .swiper-pagination-bullet-active{
+            
+            background-color: rgb(206, 103, 19);
+        }
+
+    </style>
+
+    <script defer src="/your-path-to-fontawesome/js/all.js"></script>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <h1>Modus</h1>Versus
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <div><a href="index.html" class="active">
                                 Home
                             </a>
-                        </li>
-                        <li>
-                            <a href="#">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="about.html">
                                 About
                             </a>
-                        </li>
-                        <li>
-                            <a href="#">
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#">
                                 Services
                             </a>
-                        </li>
-                        <li class="dd-parent">
-                            <a id="portfolio" href="#">
+                        </div>
+                    </li>
+                    <li class="dd-parent">
+                        <div class="relative-to">
+                            <a href="#">
                                 Porfolio
                             </a>
-                        </li>
-                        
-                        <li>
-                            <a href="#">
+                            <div class="menu-border">
+                                <ul class="dd-menu">
+                                    <li>
+                                        <a href="#1">> portfolio column 2 page</a>
+                                    </li>
+                                    <li>
+                                        <a href="#2">> portfolio column 2 page</a>
+                                    </li>
+                                    <li>
+                                        <a href="#3">> portfolio column 2 page</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div>
+                            <a href="blog.html">
                                 Blog
                             </a>
-                        </li>
-                        <li>
-                            <a href="#">
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#">
                                 Features
                             </a>
-                        </li>
-                        <li>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
                             <a href="#">
                                 Contacts
                             </a>
-                        </li>
-                        <li><a href="#">search</a></li>
-                    </ul>
-                </nav>
-                
-                <div class="menu-border">
-                    <ul class="dd-menu">
-                        <li><a href="#1"> > Portfolio column page</a></li>
-                        <li><a href="#2"> > Portfolio column page</a></li>
-                        <li><a href="#3"> > Portfolio column page</a></li>
-                    </ul>
-                </div>
+                        </div>
+                    </li>
+                    <li><i class="fas fa-search"></i></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
 
+    <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    
+        
+    </div><!-- Swiper End -->
+
+
+    <div class="top-services">
+        <div class="left-content">
+            <h2>Some of our top services</h2>
+            <span>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro pariatur maiores magni commodi.
+            </span>
+        </div>
+        <button class="view-more-button">VIEW MORE</button>
+    </div>
+
+
+    <!-- Four sevices section -->
+    <div class="four-services-section">
+        <div class="wrapper">
+            <div class="service-item">
+                <div class="img-place">
+                    <span><i class="far fa-thumbs-up"></i></span>
+                    <h2>SUSPENDISSE</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet  elit. suscipit, blanditiis, molestias nisi tempore quo doloribus ullam sunt error enim beatae.</p>
+                <div class="service-content"></div>
+                <button>read more</button>
             </div>
-        </header>
+            <div class="service-item">
+                <div class="img-place">
+                    <span><i class="fas fa-key"></i></span>
+                    <h2>MAECENAS</h2>
+                </div>
+                <p>amet consectetur  quod suscipit, blanditiis, molestias nisi tempore quo doloribus ullam sunt error enim beatae.</p>
+                <div class="service-content"></div>
+                <button>read more</button>
+            </div>
+            <div class="service-item">
+                <div class="img-place">
+                    <span><i class="fas fa-flag"></i></span>
+                    <h2>ALIQUAM</h2>
+                </div>
+                <p>elit. Amet debitis aliquid alias quod suscipit, blanditiis, molestias nisi tempore quo doloribus ullam sunt error enim beatae.</p>
+                <div class="service-content"></div>
+                <button>read more</button>
+            </div>
+            <div class="service-item">
+                <div class="img-place">
+                    <span><i class="fas fa-flask"></i></span>
+                    <h2>HABITASSE</h2>
+                </div>
+                <p>consectetur  quod suscipit, blanditiis, molestias nisi tempore quo doloribus ullam sunt error enim beatae.</p>
+                <div class="service-content"></div>
+                <button>read more</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Why to choose us section -->
+
+    <div class="why-modus">
+        <div class="why-section-text">
+            <h2>WHY MODUS VERSUS?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sint?</p>
+        </div>
+
+        <div class="why-modus-screens">
+            <div class="screen-border">
+                <div class="screen-control-buttons">
+                    <div class="left-side-controlers">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="right-side-button">
+                        <span class="line-controler"></span>
+                    </div>
+                </div>
+                <div class="screen-image"></div>
+            </div>
+
+            <div class="screen-border">
+                <div class="screen-control-buttons">
+                    <div class="left-side-controlers">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="right-side-button">
+                        <span class="line-controler"></span>
+                    </div>
+                </div>
+                <div class="screen-image"></div>
+            </div>
+
+            <div class="screen-border">
+                <div class="screen-control-buttons">
+                    <div class="left-side-controlers">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="right-side-button">
+                        <span class="line-controler"></span>
+                    </div>
+                </div>
+                <div class="screen-image"></div>
+            </div>
+        </div>
+    </div>
+    <!-- End Why modus top -->
+
+    <div class="why-section-bottom">
+        <div class="left-side">
+            <h3>Why Choose Us?</h3>
+            <ul>
+                <li><i class="fas fa-arrow-right"></i>t amet dipisicing.</li>
+                <li><i class="fas fa-arrow-right"></i>Lorem ctetur monsectetur</li>
+                <li><i class="fas fa-arrow-right"></i>sum dolor sit atur</li>
+                <li><i class="fas fa-arrow-right"></i>Lorem ctetur sit</li>
+                <li><i class="fas fa-arrow-right"></i>or sit amet ctetur</li>
+                <li><i class="fas fa-arrow-right"></i>ipsum dolor sit hue</li>
+            </ul>
+        </div>
+        <div class="middle-section">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, at commodi autem non accusantium<span> vehicula mattis</span> est, aperiam animi quidem velit inventore aspernatur nobis impedit!</p>
+            <div class="semi-donut-chart">
+                <div class="donut-item">
+                    <div class="semi-donut" style="--percentage: 50; --fill: red">
+                        <h3>50</h3>
+                    </div>
+                    <h3 class="statictic-name">SUSPENDISSE</h3>
+                </div>
+                <div class="donut-item">
+                    <div class="semi-donut" style="--percentage: 70; --fill: green">
+                        <h3>70</h3>
+                    </div>
+                    <h3 class="statictic-name">MAECENAS</h3>
+                </div>
+                <div class="donut-item">
+                    <div class="semi-donut" style="--percentage: 80; --fill: rgb(194, 55, 0)">
+                        <h3>80</h3>
+                    </div>
+                    <h3 class="statictic-name">ALIQUAM</h3>
+                </div>
+                <div class="donut-item">
+                    <div class="semi-donut" style="--percentage: 100; --fill: purple">
+                        <h3>100</h3>
+                    </div>
+                    <h3 class="statictic-name">HABITASSE</h3>
+                </div>
+            </div>
+            
+        </div>
+        <div class="right-side">
+            <h3>What Client's Say?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quaerat, doloribus obcaecati amet animi similique.</p>
+            <span>Jhon Doe</span>
+        </div>
+    </div>
+
+
+    <!-- OUR Happy Clients -->
+    <div class="our-happy-clients">
+        <div class="top-our-happy-clients">
+            
+        </div>
+
+        <div class="images-our-happy-clients">
+            <div>
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="brand-carousel">
+        <div class="brand-carousel-top-line-and-title">
+            <h2>Our Happy Clients</h2>
+            <div class="hr-line">
+                <div class="circle"></div>
+            </div>
+            <div class="controlling-buttons">
+                <i class="fas fa-chevron-left"></i>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+        <div class="images-section">
+            <div class="single-logo">
+                <div class="image">
+                    <img style="width: 100%; height: 100%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/JQuery-Logo.svg/1200px-JQuery-Logo.svg.png" alt="google" />
+                </div>
+            </div>
+            <div class="single-logo">
+                <div class="image">
+                    <img style="width: 100%; height: 100%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/JQuery-Logo.svg/1200px-JQuery-Logo.svg.png" alt="google" />
+                </div>
+            </div>
+            <div class="single-logo">
+                <div class="image">
+                    <img style="width: 100%; height: 100%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/JQuery-Logo.svg/1200px-JQuery-Logo.svg.png" alt="google" />
+                </div>
+            </div>
+            <div class="single-logo">
+                <div class="image">
+                    <img style="width: 100%; height: 100%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/JQuery-Logo.svg/1200px-JQuery-Logo.svg.png" alt="google" />
+                </div>
+            </div>
+            <div class="single-logo">
+                <div class="image">
+                    <img style="width: 100%; height: 100%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/JQuery-Logo.svg/1200px-JQuery-Logo.svg.png" alt="google" />
+                </div>
+            </div>
+            <div class="single-logo">
+                <div class="image">
+                    <img style="width: 100%; height: 100%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/JQuery-Logo.svg/1200px-JQuery-Logo.svg.png" alt="google" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="wrapper">
+            <div class="modus-versus-footer">
+                <div class="footer-logo">
+                    <h2>MODUS</h2><span> versus</span>
+                </div>
+                <div class="footer-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae aperiam velit molestias repellendus quaerat dolore nihil cupiditate hic.</div>
+                <div class="footer-contact">
+                    Phone:<span> 182 2569 5896</span><br>
+                    e-mail:<span> info@modu.versus</span>
+                </div>
+            </div>
+            <div class="footer-company">
+                <h2>Company</h2>
+                <ul>
+                    <li><i class="fas fa-chevron-right"></i> About</li>
+                    <li><i class="fas fa-chevron-right"></i> FAQ</li>
+                    <li><i class="fas fa-chevron-right"></i> Contact</li>
+                    <li><i class="fas fa-chevron-right"></i> Terms</li>
+                    <li><i class="fas fa-chevron-right"></i> Privacy</li>
+                    <li><i class="fas fa-chevron-right"></i> Testimonials</li>
+                </ul>
+            </div>
+            <div class="footer-community">
+                <h2>Community</h2>
+                <ul>
+                    <li><i class="fas fa-chevron-right"></i> Blog</li>
+                    <li><i class="fas fa-chevron-right"></i> Forum</li>
+                    <li><i class="fas fa-chevron-right"></i> Support</li>
+                    <li><i class="fas fa-chevron-right"></i> Newsletter</li>
+                </ul>
+            </div>
+            <div class="footer-from-blog">
+                <div class="footer-blog-header">
+                    <span>from the </span><h2>BLOG</h2>
+                </div>
+                <div class="footer-posts">
+                    <div class="single-post">
+                        <div class="footer-post-image"></div>
+                        <div class="footer-post-text">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <span class="date">26 May, 2013</span>
+                        </div>
+                    </div>
+                    <div class="single-post">
+                        <div class="footer-post-image"></div>
+                        <div class="footer-post-text">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <span class="date">26 May, 2013</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="final-footer">
+        <div class="wrapper">
+            <span>2013 ModusVersus</span>
+            <div class="social-media-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-google-plus-g"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fas fa-rss"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <script src="../node_modules/swiper/swiper-bundle.js"></script> -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+<!-- FIRST slider -->
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        loop: true,
         
-        
-    </body>
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+</script>
+
+
+</body>
 </html>

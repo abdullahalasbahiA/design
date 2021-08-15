@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+import logo from './assets/images/logo.svg';
+import sun_image from './assets/images/sun.jpg';
 
 function component(){
     let m = document.createElement('main');
