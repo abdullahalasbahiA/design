@@ -67,6 +67,11 @@ module.exports = {
             title: 'Blog page',
             filename: 'blog.html',
             template: path.resolve(__dirname, 'src/blog.html')
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Blog page',
+            filename: 'single_post.html',
+            template: path.resolve(__dirname, 'src/single_post.html')
         })
     ],
 }

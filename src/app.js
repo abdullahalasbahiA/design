@@ -11,7 +11,7 @@ const drop_down_menu = document.getElementById("dd-menu");
 import "./scss/style.scss";
 import "./scss/about.scss";
 import "./scss/blog.scss";
-// import "./scss/single_blog.scss";
+import "./scss/single_post.scss";
 
 // font awesome
 import "C:/Users/abdul/Desktop/HardPoints/designing/design/node_modules/@fortawesome/fontawesome-free/js/all.js";
