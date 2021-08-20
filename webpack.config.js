@@ -69,9 +69,39 @@ module.exports = {
             template: path.resolve(__dirname, 'src/blog.html')
         }),
         new HtmlWebpackPlugin({
-            title: 'Blog page',
+            title: 'Single Post page',
             filename: 'single_post.html',
             template: path.resolve(__dirname, 'src/single_post.html')
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Features page',
+            filename: 'features.html',
+            template: path.resolve(__dirname, 'src/features.html')
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Contact page',
+            filename: 'contact.html',
+            template: path.resolve(__dirname, 'src/contact.html')
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Portfolio 1',
+            filename: 'portfolio1.html',
+            template: path.resolve(__dirname, 'src/portfolio1.html')
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Portfolio 2',
+            filename: 'portfolio2.html',
+            template: path.resolve(__dirname, 'src/portfolio2.html')
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Portfolio single page',
+            filename: 'portfolio_single_page.html',
+            template: path.resolve(__dirname, 'src/portfolio_single_page.html')
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Services',
+            filename: 'services.html',
+            template: path.resolve(__dirname, 'src/services.html')
         })
     ],
 }

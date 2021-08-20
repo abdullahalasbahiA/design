@@ -1,6 +1,6 @@
 @import "variables";
 
-body.single_post_page{
+body.contact-page{
 
 .blog-wrapper{
     display: flex;
@@ -138,7 +138,6 @@ body.single_post_page{
 
                 .post-category,
                 .post-tag{
-                    margin-right: 15px;
                     display: inline-block;
                 }
 
@@ -400,10 +399,22 @@ body.single_post_page{
 }
 
 
+.text {
+    background: #e4e4e4;
+    color: $gray;
+    padding: 30px 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
 
 .side-content{
     width: 100%;
     min-width: 200px;
+
+  
 
     .categories{
         margin-bottom: 40px;
@@ -413,7 +424,7 @@ body.single_post_page{
         }
 
         ul{
-            margin-left: 20px;
+            padding-left: 0;
             li{
               list-style: none;
                 a{
