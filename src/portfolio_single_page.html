@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="scss/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+
+    <script defer src="/your-path-to-fontawesome/js/all.js"></script>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <h1>Modus</h1>Versus
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <div><a href="index.html" class="active">
+                                Home
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="about.html">
+                                About
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="services.html">
+                                Services
+                            </a>
+                        </div>
+                    </li>
+                    <li class="dd-parent">
+                        <div class="relative-to">
+                            <a href="portfolio1.html" class="dropping-link">
+                                Porfolio
+                            </a>
+                            <div class="menu-border">
+                                <ul class="dd-menu">
+                                    <li>
+                                        <a href="portfolio2.html">> portfolio column 2 page</a>
+                                    </li>
+                                    <li>
+                                        <a href="portfolio3.html">> portfolio column 2 page</a>
+                                    </li>
+                                    <li>
+                                        <a href="portfolio4.html">> portfolio column 2 page</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div>
+                            <a href="blog.html">
+                                Blog
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="features.html">
+                                Features
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="contact.html">
+                                Contacts
+                            </a>
+                        </div>
+                    </li>
+                    <li><i class="fas fa-search"></i></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="bar"style="margin-bottom: 40px">
+        <div class="wrapper">
+            <h2>PORTFOLIO</h2>
+            <span>Home / Portfolio / WORDPRESS</span>
+        </div>
+    </div>
+
+    <!-- Slider main container -->
+    <div class="swiper-container" style=" width: 90% !important; overflow: hidden;">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    
+        
+    </div><!-- Swiper End -->
+
+    <div class="project-title">
+        <h2>Project TITLE</h2>
+        <i class="fas fa-chevron-left"></i>
+        <i class="fas fa-chevron-right"></i>
+    </div>
+
+
+    <div class="container">
+        <div class="project-information">
+            <div class="project-description">
+                <h2>PROEJECT DESCRIPTION</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi fugiat quos sequi iure doloremque provident ducimus exercitationem officia! Rerum illum similique eaque, totam voluptates dolorem, perspiciatis quia, laborum numquam fugiat quod ducimus maiores tempore aliquid non? Reiciendis accusamus tempora facere totam illum a, necessitatibus facilis voluptate ab eveniet sit aut mollitia repudiandae est voluptatibus repellat similique voluptatem soluta maxime quia dolorum dignissimos magnam temporibus architecto! Esse, adipisci! Laudantium, officiis saepe!</p>
+            </div>
+            <div class="project-details">
+                <h2>PROJECT DETAILS</h2>
+                <div>
+                    <span>Release date</span>
+                    <span>26 May 2013</span>
+                </div>
+                <div>
+                    <span>Technologies</span>
+                    <span>HTML/CSS/WORDPRESS</span>
+                </div>
+                <div>
+                    <span>Client</span>
+                    <span>MightyDeals</span>
+                </div>
+                <div>
+                    <span><i class="fas fa-link"></i>Project url</span>
+                    <span><a href="#">VIEW PROJECT</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div class="brand-carousel">
+        <div class="brand-carousel-top-line-and-title">
+            <h2>REPLATED PROJECTS</h2>
+            <div class="hr-line">
+                <div class="circle"></div>
+            </div>
+            <div class="controlling-buttons">
+                <i class="fas fa-chevron-left"></i>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+        <div class="swiper-container1" style="height: 100px">
+            <div class="swiper-wrapper" style="height: 100px;">
+              <div class="swiper-slide"><div class="swiper-slide-container">Slide 1</div></div>
+              <div class="swiper-slide"><div class="swiper-slide-container">Slide 2</div></div>
+              <div class="swiper-slide"><div class="swiper-slide-container">Slide 3</div></div>
+              <div class="swiper-slide"><div class="swiper-slide-container">Slide 4</div></div>
+              <div class="swiper-slide"><div class="swiper-slide-container">Slide 5</div></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+    </div>
+
+
+    <footer>
+        <div class="wrapper">
+            <div class="modus-versus-footer">
+                <div class="footer-logo">
+                    <h2>MODUS</h2><span> versus</span>
+                </div>
+                <div class="footer-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae aperiam velit molestias repellendus quaerat dolore nihil cupiditate hic.</div>
+                <div class="footer-contact">
+                    Phone:<span> 182 2569 5896</span><br>
+                    e-mail:<span> info@modu.versus</span>
+                </div>
+            </div>
+            <div class="footer-company">
+                <h2>Company</h2>
+                <ul>
+                    <li><i class="fas fa-chevron-right"></i> About</li>
+                    <li><i class="fas fa-chevron-right"></i> FAQ</li>
+                    <li><i class="fas fa-chevron-right"></i> Contact</li>
+                    <li><i class="fas fa-chevron-right"></i> Terms</li>
+                    <li><i class="fas fa-chevron-right"></i> Privacy</li>
+                    <li><i class="fas fa-chevron-right"></i> Testimonials</li>
+                </ul>
+            </div>
+            <div class="footer-community">
+                <h2>Community</h2>
+                <ul>
+                    <li><i class="fas fa-chevron-right"></i> Blog</li>
+                    <li><i class="fas fa-chevron-right"></i> Forum</li>
+                    <li><i class="fas fa-chevron-right"></i> Support</li>
+                    <li><i class="fas fa-chevron-right"></i> Newsletter</li>
+                </ul>
+            </div>
+            <div class="footer-from-blog">
+                <div class="footer-blog-header">
+                    <span>from the </span><h2>BLOG</h2>
+                </div>
+                <div class="footer-posts">
+                    <div class="single-post">
+                        <div class="footer-post-image"></div>
+                        <div class="footer-post-text">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <span class="date">26 May, 2013</span>
+                        </div>
+                    </div>
+                    <div class="single-post">
+                        <div class="footer-post-image"></div>
+                        <div class="footer-post-text">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <span class="date">26 May, 2013</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="final-footer">
+        <div class="wrapper">
+            <span>2013 ModusVersus</span>
+            <div class="social-media-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-google-plus-g"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fas fa-rss"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <script src="../node_modules/swiper/swiper-bundle.js"></script> -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+<!-- FIRST slider -->
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        loop: true,
+        
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+
+
+    
+var swipers = new Swiper('.swiper-container1', {
+  pagination: '.swiper-pagination',
+  slidesPerView: 6,
+  centeredSlides: true,
+  paginationClickable: true,
+  loop: true,
+  spaceBetween: 30,
+  slideToClickedSlide: true
+});
+</script>
+
+
+</body>
+</html>

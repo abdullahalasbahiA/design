@@ -29,6 +29,17 @@ import "C:/Users/abdul/Desktop/HardPoints/designing/design/node_modules/@fortawe
 // document.body.append(component())
 
 
+// Drop down menu
+const dropping_link = document.querySelector(".dropping-link");
+const dd_menu = document.querySelector(".dd-menu");
+
+
+dropping_link.addEventListener("click", event => {
+    dd_menu.parentElement.classList.toggle("show");
+});
+
+
+
 // Accordion
 const accordion_tabs = document.querySelectorAll(".accordion-top");
 const accordion_contents = document.querySelectorAll(".accordion-content");

@@ -1,0 +1,29 @@
+.project-information{
+    display: flex;
+    justify-content: space-between;
+
+    .project-description{
+        width:60%;
+    }
+
+    .project-details{
+        width: 30%;
+
+        div{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #000;
+            margin: 10px 0;
+            padding-bottom: 10px;
+
+            a{
+                color: red;
+                text-decoration: none;
+            }
+        }
+
+        div:last-child{
+            border: none;
+        }
+    }
+}

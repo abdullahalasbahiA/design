@@ -94,6 +94,16 @@ module.exports = {
             template: path.resolve(__dirname, 'src/portfolio2.html')
         }),
         new HtmlWebpackPlugin({
+            title: 'Portfolio 3',
+            filename: 'portfolio3.html',
+            template: path.resolve(__dirname, 'src/portfolio3.html')
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Portfolio 4',
+            filename: 'portfolio4.html',
+            template: path.resolve(__dirname, 'src/portfolio4.html')
+        }),
+        new HtmlWebpackPlugin({
             title: 'Portfolio single page',
             filename: 'portfolio_single_page.html',
             template: path.resolve(__dirname, 'src/portfolio_single_page.html')

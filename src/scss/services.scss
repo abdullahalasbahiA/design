@@ -1,0 +1,59 @@
+@import "variables";
+.services{
+
+
+
+    .our-team-section{
+        background: none;
+
+        .service-item{
+            display: flex;
+            flex-direction: row;
+            justify-content: center !important;
+            align-items: center !important;
+
+        }
+
+        .service-item:hover{
+            background: #90d1cb;
+            p{
+                color: white;
+            }
+        }
+
+        div.about-img-place{
+
+            div{
+                display: inline-block;
+
+                p{
+                    display: block;
+                    font-size: 1.2rem;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #000;
+                }
+                p:last-child{
+                    border-bottom: 0;
+                }
+                
+            }
+
+            
+            
+        }
+
+        
+
+        div.about-img-place p{
+            display: inline-block;
+            font-size: 20px;
+            margin: 0;
+        }
+        .service-item{
+            .start-btn{
+                bottom: 100%;
+            }
+        }
+    }
+
+}

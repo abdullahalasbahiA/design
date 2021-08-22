@@ -1,0 +1,118 @@
+@import "variables";
+
+.portfolio1{
+
+    .portfolio-tabs{
+        ul{
+            padding-left: 0;
+
+            li{
+                display: inline-block;
+                margin-right: 15px;
+                
+                
+                a{
+                    color: white;
+                    text-decoration: none;
+                    background: $green;
+                    padding: 10px;
+                    border-radius: 5px;
+                    box-shadow: 0 4px 0 #000;
+                }
+
+                a.active{
+                    background-color: $red;
+                }
+
+                a:hover{
+                    background: $red;
+                }
+            }
+        }
+    }
+
+    .four-images-section{
+        .text-section{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+            height: 100%;
+            .text-part{
+            
+    
+                h2{
+                    font-size: 40px;
+                    color: $gray;
+                }
+                p{
+    
+                }
+            }
+
+            .bottom-post{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                div{
+                    display: flex;
+                    align-items: center;
+                    .svg-inline--fa{
+                        background: red;
+                        border-radius: 5px;
+                        padding: 10px;
+                        font-size: 40px;
+                        color: white;
+                        margin-right: 10px;
+                    }
+                    span{
+                        color: $gray;
+                        font-size: 25px;
+                    }
+                }
+                button{
+                    padding: 10px 30px;
+                    background-color: $red;
+                    color: white;
+                    font-size: 1rem;
+                    border: none;
+                    border-radius: 5px;
+                    box-shadow: 0 4px 0 rgb(165, 48, 48);
+                }
+            }
+        }
+    }
+
+
+    .portfolio-pages{
+        display: inline-block;
+        margin-left: 33%;
+        margin-top:40px;
+        margin-bottom: 40px;
+        ul{
+            li{
+                display: inline-block;
+                a{
+                    display: inline-block;
+                    background: $green;
+                    text-decoration: none;
+                    padding: 10px;
+                    font-size: 1.1rem;
+                    line-height: 20px;
+                    text-align: center;
+                    color: white;
+                    font-weight: bold;
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 5px;
+                }
+                a:hover{
+                    background: $red;
+                }
+            }
+        }
+    }
+
+
+}

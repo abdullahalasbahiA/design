@@ -24,13 +24,27 @@ $width: 92%;
 }
 
 
-.swiper-container{
+.swiper-container,
+.swiper-container1{
   position: relative;
   height: 500px;
   overflow-y: visible;
   overflow-x: visible;
   background-color:rgb(245, 245, 245);
 }
+
+.swiper-container1{
+  width: 90%px;
+  overflow: hidden;
+  .swiper-wrapper{
+  }
+  .swiper-slide{
+    width: 15s0px;
+    background: red;
+    margin-right: 10px;
+  }
+}
+
 .swiper-container .swiper-slide{
   background: #ccc;
   display: flex;
@@ -205,9 +219,11 @@ header{
 .relative-to{
   position: relative;
 
-  a:hover ~ .menu-border{
-    display: block;
-  }
+  // a:hover ~ .menu-border{
+  //   display: block;
+  // }
+
+
 
   .menu-border{
     position: absolute;
@@ -246,6 +262,9 @@ header{
         }
       }
     }
+  }
+  .show{
+    display: block;
   }
 
 
